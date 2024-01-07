@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignUp</title>
     <style>
         body{
             
@@ -63,9 +63,13 @@
     </style>
 </head>
 <body>
-    <h1>login</h1>
+    <h1>SignUp</h1>
     
     <form onsubmit=" return validate()">
+        <div class="row">
+            <label>Email</label>
+            <input type="text" id="text" placeholder="Enter Email"/>
+        </div>
         <div class="row">
             <label>username</label>
             <input type="text" id="username" placeholder="Enter your name"/>
@@ -74,7 +78,7 @@
             <label>password</label>
             <input type="password" id="password" placeholder="Enter password"/>
         </div>
-        <button class="btn" >login</button>
+        <button class="btn" >SignUp</button>
 
     </form>
     <script>
@@ -94,7 +98,7 @@
                 alert("Check your username")
                 return false
             }
-            if(password.match(passwordCheck)){
+            if(!password.match(passwordCheck)){
                 alert("Password must carry one uppercase,lowercase and a number")
                 return false
             }
